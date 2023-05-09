@@ -1,0 +1,29 @@
+<!-- <add-to-small-program class="addToSmallProgram"></add-to-small-program> -->
+<view>
+    <view class="bg-white grid col-4 text-center">
+        <view wx:for="{{iconList}}" wx:key="icon">
+            <button bindtap="onNavigate" class="bg-white button-grid-view" data-url="{{item.url}}" wx:if="{{item.type==0}}">
+                <image class="png lg" mode="aspectFit" src="{{item.icon}}"></image>
+                <text class="text-df icon-text">{{item.name}}</text>
+            </button>
+            <button class="bg-white button-grid-view" groupId="978521809" openType="{{connectType}}" wx:if="{{item.type==1}}">
+                <image class="png lg" mode="aspectFit" src="{{item.icon}}"></image>
+                <text class="text-df icon-text">{{item.name}}</text>
+            </button>
+            <navigator class="bg-white button-grid-view" appId="{{item.appid}}" path="pages/index/index" target="miniProgram" wx:if="{{item.type==2}}">
+                <image class="png lg" mode="aspectFit" src="{{item.icon}}"></image>
+                <text class="text-df icon-text">{{item.name}}</text>
+            </navigator>
+        </view>
+    </view>
+    <view class="adContainer" wx:if="{{ad.showAd && !noAd}}">
+        <ad binderror="onAdLoadFail" bindload="onAdLoadSuccess" unitId="{{ad.id}}"></ad>
+        <official-account></official-account>
+    </view>
+    <view class="adContainer" wx:if="{{noAd}}">
+      <navigator appId="wxb9243b0a739dd4db" path="pages/index/index" target="miniProgram">
+            <image mode="widthFix" src="/images/banner003.png" style="width: 100%;"></image>
+      </navigator>
+    </view>
+        
+</view>

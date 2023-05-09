@@ -1,0 +1,174 @@
+page {
+    background: #ff406a;
+}
+
+.top {
+    display: flex;
+    height: 80rpx;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20rpx auto;
+    width: 70%;
+}
+
+.top-text {
+    color: white;
+    line-height: 80rpx;
+    font-size: 26rpx;
+}
+
+.set {
+    margin-right: 0;
+    background: #ffffff;
+    color: #ff406a;
+    border-radius: 10rpx;
+    line-height: 60rpx;
+    font-size: 30rpx;
+}
+
+.fl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.save {
+    margin: 0;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    border-radius: 10rpx;
+    background: #ffffff;
+    color: #ff406a;
+}
+
+.choose-more {
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    margin: 0;
+    background: #ffb800;
+    color: #fff;
+}
+
+.set::after,.save::after,.choose-more::after {
+    border: 0;
+}
+
+.clearBtn {
+    height: 60rpx;
+    line-height: 60rpx;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+.clearBtn::after {
+    border: none;
+}
+
+.fs40 {
+    font-size: 40rpx;
+}
+
+.recommend,.feedback {
+    border-bottom: 1rpx solid #fff;
+    color: #fff;
+    border-radius: 0;
+}
+
+.progress {
+    margin: 20rpx;
+    color: #fff;
+}
+
+.container {
+    width: 324px;
+    height: 324px;
+    margin: 20rpx auto;
+    background: #fff;
+}
+
+.bottom {
+    width: 324px;
+}
+
+.container2 {
+    width: 1944px;
+    height: 1944px;
+    margin: 0 auto;
+    position: fixed;
+    left: 100%;
+    bottom: -100%;
+    background: #fff;
+    z-index: -1;
+}
+
+.top-news {
+    width: 100%;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.self-box {
+    position: absolute;
+    left: 0;
+    height: 120rpx;
+    width: 80rpx;
+    display: inline-block;
+    background: #fff;
+}
+
+.img-self {
+    width: 60rpx;
+    height: 60rpx;
+    padding-top: 20rpx;
+    padding-left: 10rpx;
+}
+
+.img-self image {
+    width: 100%;
+    height: 100%;
+}
+
+.self-add {
+    position: absolute;
+    right: 0;
+    height: 100rpx;
+    width: 80rpx;
+    display: inline-block;
+    background: #fff;
+}
+
+.img-add {
+    width: 60rpx;
+    height: 60rpx;
+    padding-top: 20rpx;
+    padding-left: 10rpx;
+}
+
+.img-add image {
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-view_H {
+    white-space: nowrap;
+    padding-left: 90rpx;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.nav-name {
+    display: inline-block;
+    padding: 20rpx;
+}
+
+.nav-name image {
+    width: 80rpx;
+    height: 80rpx;
+    border: solid 3rpx #FF9CC2;
+}

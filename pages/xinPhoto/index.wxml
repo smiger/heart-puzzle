@@ -1,0 +1,31 @@
+<view>
+    <view class="top">
+        <icon color="white" size="12" type="info"></icon>
+        <text class="top-text">提示：发朋友圈时请按顺序上传</text>
+        <button bindtap="setBtn" class="set">重置</button>
+    </view>
+    <canvas bindtouchend="oneImg" canvasId="myCanvas" class="container"></canvas>
+    <view class="fl">
+        <button bindtap="saveImg" class="save" disabled="{{btnDis}}">一键保存图片</button>
+        <button bindtap="moreImg" class="choose-more">选择多张图片</button>
+    </view>
+    <!-- <ad unitId="adunit-9a0162d7fe0eb7d5"></ad> -->
+    <icon color="white" size="12" type="info"></icon>
+    <text class="top-text">点击下方可以选模板哦</text>
+    <progress active showInfo activeColor="#FF9CC2" activeMode="forwards" class="progress" percent="{{percent}}" strokeWidth="12" style="display:{{progressVis}};"></progress>
+    <view class="top-news">
+        <view class="self-box">
+            <view class="img-self">
+                <image mode="widthFix" src="/images/love/2.png"></image>
+            </view>
+        </view>
+        <view class="nav-scroll">
+            <scroll-view class="scroll-view_H" scrollX="true" style="width: 100%">
+                <view bindtap="shape" class="nav-name {{item.id==currentId?'nav-hover':''}}" data-id="{{item.id}}" wx:for="{{section}}" wx:key="id">
+                    <image mode="widthFix" src="{{item.icon}}"></image>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <canvas canvasId="myCanvas2" class="container2"></canvas>
+</view>

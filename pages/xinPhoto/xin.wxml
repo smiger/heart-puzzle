@@ -1,0 +1,38 @@
+
+<view>
+  <!-- 拼相框页面 -->
+    <view class="top">
+        <icon color="white" size="12" type="info"></icon>
+        <text class="top-text">提示：点击心形可以选单张图片</text>
+        <button bindtap="resetBtn" class="set">重置</button>
+    </view>
+    <canvas bindtouchend="oneImg" canvasId="myCanvas" class="container"></canvas>
+    
+    <!-- <ad unit-id="adunit-b77b0bca6983be2d"></ad> -->
+    <radio-group bindchange="radioChange">
+              <label wx:for="{{fullType}}" wx:key="index">
+                  <radio checked="{{item.checked}}"   value="{{item.type}}"></radio>
+                 {{item.name}}
+        </label>
+    </radio-group>
+    <progress active showInfo activeColor="#FF9CC2" activeMode="forwards" class="progress" percent="{{percent}}" strokeWidth="12" style="display:{{progressVis}};"></progress>
+    <view class="fl">
+        <button bindtap="saveImg" class="save" disabled="{{btnDis}}">一键保存图片</button>
+        <button bindtap="moreImg" class="choose-more">选择多张图片</button>
+    </view>
+
+<view class="fl">
+    <icon color="white" size="12" type="info"></icon>
+    <text class="top-text">选择模板</text>
+    <view class="top-news">
+        <view class="nav-scroll">
+            <scroll-view class="scroll-view_H" scrollX="true" style="width: 100%">
+                <view bindtap="shape" class="nav-name {{item.id==currentId?'nav-hover':''}}" data-id="{{item.id}}" wx:for="{{section}}" wx:key="id">
+                    <image mode="widthFix" src="{{item.icon}}"></image>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    </view>
+    <canvas canvasId="myCanvas2" class="container2"></canvas>
+</view>
